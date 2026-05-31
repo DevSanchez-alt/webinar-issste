@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Shield, Sparkles, Gamepad2, Gift, ShieldAlert, Activity } from 'lucide-react';
+import { Shield, Sparkles, Gamepad2, Gift, ShieldAlert, Activity, Candy, CloudFog, Zap } from 'lucide-react';
 
 export const Slide01 = () => {
   return (
@@ -198,9 +198,9 @@ export const Slide04 = () => {
 
 export const Slide05 = () => {
   const tactics = [
-    { icon: Gift, color: "text-pink-500", bg: "bg-pink-50", title: "Diseño & Sabores", desc: "Más de 15,000 sabores dulces (algodón de azúcar) y diseño de 'juguete'." },
-    { icon: ShieldAlert, color: "text-amber-500", bg: "bg-amber-50", title: "El Mito del Vapor", desc: "Mienten diciendo que es 'solo vapor de agua'. Es un aerosol tóxico." },
-    { icon: Gamepad2, color: "text-purple-500", bg: "bg-purple-50", title: "Sales de Nicotina", desc: "Un solo pod desechable equivale a 40-60 cigarrillos (2 a 3 cajetillas)." }
+    { icon: Candy, color: "text-pink-500", bg: "bg-pink-50", title: "Diseño & Sabores", desc: "Más de 15,000 sabores dulces (algodón de azúcar) y diseño de 'juguete'." },
+    { icon: CloudFog, color: "text-amber-500", bg: "bg-amber-50", title: "El Mito del Vapor", desc: "Mienten diciendo que es 'solo vapor de agua'. Es un aerosol tóxico." },
+    { icon: Zap, color: "text-purple-500", bg: "bg-purple-50", title: "Sales de Nicotina", desc: "Un solo pod desechable equivale a 40-60 cigarrillos (2 a 3 cajetillas)." }
   ];
 
   return (
