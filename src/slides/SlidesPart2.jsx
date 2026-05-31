@@ -250,63 +250,52 @@ export const Slide10 = () => {
         Prevalencia por Región (OMS)
       </motion.h2>
 
-      <p className="text-xl md:text-2xl text-slate-500 mb-4 max-w-4xl">
-        Porcentaje de la población total que consume tabaco. Aunque Europa lidera actualmente, la industria tabacalera enfoca sus esfuerzos de crecimiento en África.
+      <p className="text-xl md:text-2xl text-slate-500 mb-8 max-w-4xl">
+        Aunque Europa lidera los porcentajes actuales, la industria tabacalera enfoca agresivamente sus esfuerzos de crecimiento en el continente africano.
       </p>
 
-      <div className="w-full max-w-[1000px] h-[400px] md:h-[450px] relative mt-12 flex flex-col justify-end pb-[4.5rem] border-b-4 border-slate-300">
-         {/* Eje Y con Líneas y Porcentajes */}
-         <div className="absolute inset-0 flex flex-col justify-between pb-[4.5rem] z-0 pointer-events-none">
-            <div className="w-full border-t border-slate-300 border-dashed flex justify-start items-center">
-              <span className="text-slate-400 text-sm md:text-base font-bold -mt-3 bg-slate-50 pr-2">30%</span>
-            </div>
-            <div className="w-full border-t border-slate-300 border-dashed flex justify-start items-center">
-              <span className="text-slate-400 text-sm md:text-base font-bold -mt-3 bg-slate-50 pr-2">20%</span>
-            </div>
-            <div className="w-full border-t border-slate-300 border-dashed flex justify-start items-center">
-              <span className="text-slate-400 text-sm md:text-base font-bold -mt-3 bg-slate-50 pr-2">10%</span>
-            </div>
+      <div className="w-full max-w-[1000px] h-[400px] md:h-[480px] relative mt-8 flex flex-col justify-end pb-24 border-b-4 border-slate-200">
+         <div className="absolute inset-0 flex flex-col justify-between pb-24 z-0 opacity-20 pointer-events-none">
+            <div className="w-full h-px bg-slate-400"></div><div className="w-full h-px bg-slate-400"></div><div className="w-full h-px bg-slate-400"></div>
          </div>
 
-         {/* Barras */}
-         <div className="flex justify-center items-end gap-8 md:gap-20 w-full z-10 pl-10">
+         <div className="flex justify-center items-end gap-10 md:gap-20 w-full z-10">
             {/* Europa */}
             <div className="flex flex-col items-center">
-               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="bg-white/80 px-4 py-2 rounded-xl mb-3 shadow-sm border border-slate-200">
-                 <span className="text-2xl md:text-3xl font-black text-rose-600">25.3%</span>
+               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="bg-white/80 px-4 py-2 rounded-xl mb-4 shadow-sm border border-rose-100">
+                 <span className="text-2xl md:text-4xl font-black text-rose-600">25.3%</span>
                </motion.div>
-               {/* 25.3 / 30 * 100 = 84% height approx */}
-               <motion.div initial={{ height: 0 }} animate={{ height: '84%' }} transition={{ duration: 1, type: "spring" }} className="w-24 md:w-32 bg-gradient-to-t from-rose-600 to-rose-400 rounded-t-[32px] absolute bottom-[4.5rem]"></motion.div>
-               <h4 className="text-xl md:text-2xl font-bold text-slate-800 mt-4 absolute -bottom-8">Europa</h4>
-               <p className="text-slate-500 font-medium text-sm md:text-base absolute -bottom-14 whitespace-nowrap">Mayor prevalencia actual</p>
+               <motion.div initial={{ height: 0 }} animate={{ height: 300 }} transition={{ duration: 1, type: "spring" }} className="w-24 md:w-40 bg-gradient-to-t from-rose-600 to-rose-400 rounded-t-[32px]"></motion.div>
+               <h4 className="text-2xl md:text-3xl font-bold text-slate-800 mt-4 absolute -bottom-10">Europa</h4>
+               <span className="absolute -bottom-16 bg-rose-50 text-rose-600 text-xs md:text-sm font-bold px-3 py-1 rounded-full border border-rose-200 whitespace-nowrap">Mayor Prevalencia</span>
             </div>
+            
             {/* Pacífico */}
             <div className="flex flex-col items-center">
-               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="bg-white/80 px-4 py-2 rounded-xl mb-3 shadow-sm border border-slate-200">
-                 <span className="text-2xl md:text-3xl font-black text-orange-500">24.6%</span>
+               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="bg-white/80 px-4 py-2 rounded-xl mb-4 shadow-sm border border-orange-100">
+                 <span className="text-2xl md:text-4xl font-black text-orange-500">24.6%</span>
                </motion.div>
-               {/* 24.6 / 30 * 100 = 82% height approx */}
-               <motion.div initial={{ height: 0 }} animate={{ height: '82%' }} transition={{ duration: 1, delay: 0.2, type: "spring" }} className="w-24 md:w-32 bg-gradient-to-t from-orange-500 to-orange-300 rounded-t-[32px] absolute bottom-[4.5rem]"></motion.div>
-               <h4 className="text-xl md:text-2xl font-bold text-slate-800 mt-4 absolute -bottom-8">Pacífico</h4>
-               <p className="text-slate-500 font-medium text-sm md:text-base absolute -bottom-14 whitespace-nowrap">Principal consumidor masc.</p>
+               <motion.div initial={{ height: 0 }} animate={{ height: 280 }} transition={{ duration: 1, delay: 0.2, type: "spring" }} className="w-24 md:w-40 bg-gradient-to-t from-orange-500 to-orange-300 rounded-t-[32px]"></motion.div>
+               <h4 className="text-2xl md:text-3xl font-bold text-slate-800 mt-4 absolute -bottom-10">Pacífico</h4>
+               <span className="absolute -bottom-16 bg-orange-50 text-orange-600 text-xs md:text-sm font-bold px-3 py-1 rounded-full border border-orange-200 whitespace-nowrap">Principal Consumidor Masc.</span>
             </div>
+            
             {/* África */}
-            <div className="flex flex-col items-center">
-               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }} className="bg-white/90 px-4 py-2 rounded-xl mb-3 border-2 border-blue-400 shadow-md relative">
-                 <span className="text-2xl md:text-3xl font-black text-blue-600">14.0%</span>
-                 <span className="absolute -top-3 -right-3 bg-rose-500 text-white text-[10px] md:text-xs font-bold px-2 py-1 rounded-full shadow-lg">En Riesgo</span>
+            <div className="flex flex-col items-center relative">
+               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }} className="bg-white/90 px-6 py-2 rounded-xl mb-4 shadow-xl border-2 border-blue-500 relative">
+                 <span className="text-2xl md:text-4xl font-black text-blue-600">Alerta</span>
+                 <motion.div animate={{ scale: [1, 1.2, 1], opacity: [0.5, 1, 0.5] }} transition={{ repeat: Infinity, duration: 1.5 }} className="absolute -top-2 -right-2 w-4 h-4 bg-rose-500 rounded-full border-2 border-white"></motion.div>
                </motion.div>
-               {/* 14.0 / 30 * 100 = 46% height approx */}
-               <motion.div initial={{ height: 0 }} animate={{ height: '46%' }} transition={{ duration: 1, delay: 0.4, type: "spring" }} className="w-24 md:w-32 bg-gradient-to-t from-blue-600 to-blue-400 rounded-t-[32px] absolute bottom-[4.5rem]"></motion.div>
-               <h4 className="text-xl md:text-2xl font-bold text-slate-800 mt-4 absolute -bottom-8">África</h4>
-               <p className="text-slate-500 font-medium text-sm md:text-base absolute -bottom-14 whitespace-nowrap">Blanco de la industria (↑)</p>
+               <motion.div initial={{ height: 0 }} animate={{ height: 180 }} transition={{ duration: 1, delay: 0.4, type: "spring" }} className="w-24 md:w-40 bg-gradient-to-t from-blue-600 to-blue-400 rounded-t-[32px]"></motion.div>
+               <h4 className="text-2xl md:text-3xl font-bold text-slate-800 mt-4 absolute -bottom-10">África</h4>
+               <span className="absolute -bottom-16 bg-blue-50 text-blue-600 text-xs md:text-sm font-bold px-3 py-1 rounded-full border border-blue-200 whitespace-nowrap">Nuevo Blanco (↑)</span>
             </div>
          </div>
       </div>
 
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1 }} className="mt-20 bg-slate-100 px-6 py-3 rounded-full border border-slate-200">
         <p className="text-slate-600 font-medium text-sm md:text-lg">
-          <strong className="text-slate-800">Figura 2:</strong> Gráfico de barras comparativo de la Prevalencia de Consumo de Tabaco.
+          <strong className="text-slate-800">Figura 2:</strong> Gráfico representativo de la Prevalencia de Consumo de Tabaco (OMS).
         </p>
       </motion.div>
     </div>
