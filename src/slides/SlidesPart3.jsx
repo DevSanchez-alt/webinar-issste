@@ -148,7 +148,7 @@ export const Slide12 = () => {
         {/* Iframe de YouTube */}
         <iframe 
           className="w-full h-full rounded-[20px] relative z-10"
-          src="https://www.youtube.com/embed/tpol12kcMl0" 
+          src="https://www.youtube.com/embed/UrA1dZNFx9M" 
           title="Video de concientización sobre Tabaquismo" 
           frameBorder="0" 
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
