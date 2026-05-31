@@ -179,7 +179,7 @@ export const SlideEngine = ({ slides }) => {
             
             {/* Footer Progress */}
             <div className="absolute bottom-8 left-16 right-16 flex justify-between items-center z-50 pointer-events-none">
-              <span className="text-slate-400 font-medium text-xl tracking-wide translate-y-[2px]">Directrices de la Organización Mundial de la Salud</span>
+              <span className="text-slate-400 font-medium text-xl tracking-wide translate-y-[6px]">Directrices de la Organización Mundial de la Salud</span>
               <span className="text-slate-500 font-bold bg-white/70 backdrop-blur-xl px-8 py-3 rounded-full text-xl shadow-[0_4px_20px_rgba(0,0,0,0.05)] border border-white/50">
                 {currentSlide + 1} / {slides.length}
               </span>
