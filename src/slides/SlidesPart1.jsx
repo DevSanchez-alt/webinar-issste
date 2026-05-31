@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Activity } from 'lucide-react';
+import { IEULogo } from '../components/IEULogo';
 
 const CustomFlavorIcon = ({ className, strokeWidth }) => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={strokeWidth || 2} strokeLinecap="round" strokeLinejoin="round" className={className}>
@@ -52,7 +53,7 @@ export const Slide01 = () => {
         
         <div className="flex flex-col items-center gap-4 mt-8 md:mt-16 bg-white/5 backdrop-blur-md px-8 py-6 rounded-[32px] border border-white/10 shadow-2xl">
           <div className="bg-white/90 px-6 py-2 rounded-2xl shadow-lg mb-2">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Logotipo_IEU.svg" alt="IEU Universidad" className="h-12 md:h-16 object-contain" />
+            <IEULogo className="h-16 md:h-24 w-auto" />
           </div>
           <p className="text-lg md:text-2xl text-slate-300 font-light tracking-wide text-center">Mtra. Daniela Nazarena Hernández Fierros</p>
         </div>
