@@ -176,7 +176,7 @@ export const Slide15 = () => {
          </div>
          <h3 className="text-xl md:text-3xl font-bold mb-2">Universidad IEU</h3>
          <p className="text-lg md:text-xl text-white/90 font-medium">(01) Herramientas Tecnológicas para el Profesional de la Salud</p>
-         <p className="text-base md:text-lg text-white/80 mt-2">Lic. Daniela Nazarena Hernández Fierros</p>
+         <p className="text-base md:text-lg text-white/80 mt-2">Mtra. Daniela Nazarena Hernández Fierros</p>
          <p className="text-sm md:text-lg text-rose-300 mt-4 font-bold tracking-widest uppercase">Escanea para recursos</p>
       </motion.div>
     </div>
