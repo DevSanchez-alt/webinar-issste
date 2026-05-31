@@ -1,6 +1,34 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Shield, Sparkles, Gamepad2, Gift, ShieldAlert, Activity, Candy, CloudFog, Zap } from 'lucide-react';
+import { Activity } from 'lucide-react';
+
+const CustomFlavorIcon = ({ className, strokeWidth }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={strokeWidth || 2} strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M7 5h10v2l-1 2v11a2 2 0 0 1-2 2H10a2 2 0 0 1-2-2V9L7 7V5z" />
+    <path d="M9 2h6v3H9z" />
+    <path d="M12 12c-1.5 1.5-2 2.5-2 3.5a2 2 0 0 0 4 0c0-1-.5-2-2-3.5z" />
+    <path d="M15 15a3 3 0 0 1-6 0" />
+  </svg>
+);
+
+const CustomToxicCloudIcon = ({ className, strokeWidth }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={strokeWidth || 2} strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M17.5 19H9a7 7 0 1 1 6.71-5h1.79a4.5 4.5 0 1 1 0 9Z" />
+    <circle cx="10" cy="11" r="1.5" fill="currentColor" stroke="none" />
+    <circle cx="14" cy="11" r="1.5" fill="currentColor" stroke="none" />
+    <path d="M11 14h2" />
+    <path d="M11.5 16h1" />
+  </svg>
+);
+
+const CustomNicotineIcon = ({ className, strokeWidth }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={strokeWidth || 2} strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <rect x="7" y="8" width="10" height="14" rx="2" />
+    <path d="M9 8V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3" />
+    <path d="M11 2h2" />
+    <path d="M13 11l-3 4h4l-3 4" fill="currentColor" stroke="none" /> 
+  </svg>
+);
 
 export const Slide01 = () => {
   return (
@@ -198,9 +226,9 @@ export const Slide04 = () => {
 
 export const Slide05 = () => {
   const tactics = [
-    { icon: Candy, color: "text-pink-500", bg: "bg-pink-50", title: "Diseño & Sabores", desc: "Más de 15,000 sabores dulces (algodón de azúcar) y diseño de 'juguete'." },
-    { icon: CloudFog, color: "text-amber-500", bg: "bg-amber-50", title: "El Mito del Vapor", desc: "Mienten diciendo que es 'solo vapor de agua'. Es un aerosol tóxico." },
-    { icon: Zap, color: "text-purple-500", bg: "bg-purple-50", title: "Sales de Nicotina", desc: "Un solo pod desechable equivale a 40-60 cigarrillos (2 a 3 cajetillas)." }
+    { icon: CustomFlavorIcon, color: "text-pink-500", bg: "bg-pink-50", title: "Diseño & Sabores", desc: "Más de 15,000 sabores dulces (algodón de azúcar) y diseño de 'juguete'." },
+    { icon: CustomToxicCloudIcon, color: "text-amber-500", bg: "bg-amber-50", title: "El Mito del Vapor", desc: "Mienten diciendo que es 'solo vapor de agua'. Es un aerosol tóxico." },
+    { icon: CustomNicotineIcon, color: "text-purple-500", bg: "bg-purple-50", title: "Sales de Nicotina", desc: "Un solo pod desechable equivale a 40-60 cigarrillos (2 a 3 cajetillas)." }
   ];
 
   return (
