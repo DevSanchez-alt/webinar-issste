@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 const CustomPassiveSmokeIcon = ({ className, strokeWidth }) => (
@@ -293,6 +293,61 @@ export const Slide15 = () => {
          <p className="text-base md:text-lg text-white/80 mt-2">Mtra. Daniela Nazarena Hernández Fierros</p>
          <p className="text-sm md:text-lg text-rose-300 mt-4 font-bold tracking-widest uppercase">Escanea para recursos</p>
       </motion.div>
+    </div>
+  );
+};
+
+export const Slide16 = () => {
+  const [flippedCards, setFlippedCards] = useState({});
+
+  const toggleCard = (index) => {
+    setFlippedCards(prev => ({ ...prev, [index]: !prev[index] }));
+  };
+
+  const cards = [
+    { myth: "El vapeo es solo vapor de agua inofensivo.", fact: "Es un aerosol que contiene metales pesados y químicos tóxicos." },
+    { myth: "Los vapes sin nicotina no causan daño.", fact: "Contienen diacetilo y químicos que causan daño pulmonar irreversible." },
+    { myth: "Fumar ocasionalmente no me hará daño.", fact: "El daño a nivel ADN y cardiovascular comienza desde la primera bocanada." },
+    { myth: "El humo de tercera mano es un mito.", fact: "Falso. Los residuos tóxicos permanecen en ropa, muebles y superficies afectando a niños." }
+  ];
+
+  return (
+    <div className="flex flex-col w-full h-full pt-10 px-8 items-center text-center pb-20 overflow-y-auto">
+      <motion.h2 
+        initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }}
+        className="text-4xl md:text-6xl font-bold text-[#0F172A] mb-4" style={{ fontFamily: 'var(--font-display)'}}
+      >
+        Interactúa: Mito vs Realidad
+      </motion.h2>
+
+      <p className="text-xl md:text-2xl text-slate-500 mb-8 max-w-4xl">
+        Desactiva el pincel para voltear las cartas. Usa el pincel para calificar las respuestas del público.
+      </p>
+
+      <div className="grid grid-cols-2 gap-8 w-full max-w-[1200px] pointer-events-auto">
+        {cards.map((card, i) => (
+          <div key={i} className="relative h-[250px] w-full [perspective:1000px] cursor-pointer" onClick={() => toggleCard(i)}>
+            <motion.div 
+              className="w-full h-full absolute transition-all duration-500 [transform-style:preserve-3d]"
+              initial={false}
+              animate={{ rotateY: flippedCards[i] ? 180 : 0 }}
+            >
+              {/* Front (Myth) */}
+              <div className="absolute w-full h-full [backface-visibility:hidden] bg-rose-50 border-2 border-rose-200 rounded-[32px] p-8 flex flex-col items-center justify-center shadow-lg hover:shadow-xl transition-shadow">
+                <span className="text-rose-500 font-bold uppercase tracking-widest mb-4">Mito</span>
+                <p className="text-2xl font-medium text-slate-800">{card.myth}</p>
+                <div className="mt-6 text-rose-400 text-sm italic">Haz clic para revelar la verdad</div>
+              </div>
+              
+              {/* Back (Fact) */}
+              <div className="absolute w-full h-full [backface-visibility:hidden] bg-emerald-50 border-2 border-emerald-200 rounded-[32px] p-8 flex flex-col items-center justify-center shadow-lg [transform:rotateY(180deg)]">
+                <span className="text-emerald-600 font-bold uppercase tracking-widest mb-4">Realidad</span>
+                <p className="text-2xl font-medium text-slate-800">{card.fact}</p>
+              </div>
+            </motion.div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
